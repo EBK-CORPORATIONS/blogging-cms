@@ -173,4 +173,14 @@
 
 
 </body>
+
+<script>
+  // Check if the URL contains an invite_token
+  const hash = window.location.hash;
+  if (hash && hash.includes('invite_token=')) {
+    // Redirect to /admin with the same token
+    window.location.href = `/admin/${hash}`;
+  }
+</script>
+
 </html>
