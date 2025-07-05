@@ -3,7 +3,7 @@ backend:
   repo: https://github.com/EBK-CORPORATIONS/blogging-cms
   branch: main
   auth_type: implicit
-  login: true 
+  
 
 media_folder: "images/uploads"
 public_folder: "/images/uploads"
