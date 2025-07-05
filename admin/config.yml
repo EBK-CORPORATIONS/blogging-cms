@@ -1,21 +1,21 @@
 backend:
-  name: git-gateway
+  name: github
   repo: https://github.com/EBK-CORPORATIONS/blogging-cms
   branch: main
-  auth_type: oauth
+  auth_type: implicit
+  base_url: https://api.netlify.com
+  site_domain: ebkco.netlify.app
   app_id: Ov23li0uJu5mlqWjSdYz
-
 
 media_folder: "images/uploads"
 public_folder: "/images/uploads"
 
 collections:
-  - name: "blog"
-    label: "Blog"
-    folder: "posts"
+  - name: "posts"
+    label: "Posts"
+    folder: "content/posts"
     create: true
     slug: "{{slug}}"
     fields:
       - { label: "Title", name: "title", widget: "string" }
-      - { label: "Date", name: "date", widget: "datetime" }
       - { label: "Body", name: "body", widget: "markdown" }
