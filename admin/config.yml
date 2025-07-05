@@ -3,7 +3,7 @@ backend:
   repo: https://github.com/EBK-CORPORATIONS/blogging-cms
   branch: main
   auth_type: implicit
-  base_url: https://api.netlify.com
+  base_url: https://ebkco.netlify.app
   site_domain: ebkco.netlify.app
   app_id: Ov23li0uJu5mlqWjSdYz
 
