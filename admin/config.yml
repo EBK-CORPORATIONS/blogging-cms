@@ -1,20 +1,16 @@
 backend:
-  name: git-gateway
-  branch: main
-  auth_type: implicit 
-  repo: https://github.com/EBK-CORPORATIONS/blogging-cms/
-
-  
-
-media_folder: "images/uploads"
-public_folder: "/images/uploads"
-
+  name: github
+  repo: EBK-CORPORATIONS/blogging-cms # e.g., username/microblog
+publish_mode: editorial_workflow
+media_folder: "static/images/uploads" # Where images are stored
+public_folder: "/images/uploads" # Public path for images in the frontend
 collections:
   - name: "posts"
     label: "Posts"
-    folder: "content/posts"
+    folder: "content/posts" # Where posts are stored as Markdown
     create: true
-    slug: "{{slug}}"
     fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Body", name: "body", widget: "markdown" }
+      - { label: "Emoji", name: "emoji", widget: "string", default: "💬" }
+      - { label: "Message", name: "message", widget: "markdown" }
+      - { label: "Image", name: "image", widget: "image", required: false }
+      - { label: "Link", name: "link", widget: "string", default: "#" }
