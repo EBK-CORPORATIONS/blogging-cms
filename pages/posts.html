@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Microblog</title>
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  <style>
+    /* Same styles as in previous response */
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #f5f5f5;
+    }
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+    #loading {
+      text-align: center;
+      color: #666;
+      margin: 20px 0;
+    }
+    .post {
+      background-color: white;
+      border-radius: 8px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    .post-emoji {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+    .post-message {
+      margin: 10px 0;
+      color: #333;
+    }
+    .post-image {
+      max-width: 100%;
+      height: auto;
+      border-radius: 4px;
+      margin: 10px 0;
+    }
+    .post-link {
+      color: #007bff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .post-link:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <h1>My Microblog</h1>
+  <div id="loading">Loading...</div>
+  <div id="posts"></div>
+  <script type="module" src="blogs.js"></script>
+</body>
+</html>
